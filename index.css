@@ -1,0 +1,38 @@
+body{
+    background-color: green;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+h1{
+    color: goldenrod;
+    font-size: 50;
+}
+.round{
+    font-style: italic;
+    font-size: 27px;
+    color: white;
+
+}
+p{
+    font-size: 22px;
+    color: white;
+}
+
+button{
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: green;
+    background-color: goldenrod ;
+    font-weight: bold;
+    font-size: large;
+    width: 150px;
+    margin-bottom: 5px;
+    border-radius: 1px;
+    /* display: inline; */
+    
+    
+
+}
+
