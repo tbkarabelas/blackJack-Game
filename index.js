@@ -10,6 +10,8 @@ let hasBlackJack = false;
 let isAlive = true;
 
 let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
+console.log(sumEl);
 // console.log(messageEl);
 
 function startGame(){
@@ -30,7 +32,7 @@ else {
     // messageEl.innerText = blackJackMessage + " " + cardTotal;
 };
 
-messageEl.textContent = blackJackMessage + " " + cardTotal;
+messageEl.textContent = blackJackMessage;
 // console.log(blackJackMessage);
 }
 
