@@ -11,7 +11,7 @@ let isAlive = true;
 
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
-console.log(sumEl);
+// console.log(sumEl);
 // console.log(messageEl);
 
 function startGame(){
@@ -33,6 +33,7 @@ else {
 };
 
 messageEl.textContent = blackJackMessage;
+sumEl.textContent = "Sum:" + " " + cardTotal;
 // console.log(blackJackMessage);
 }
 
