@@ -1,14 +1,13 @@
-let cardOne = getRandomCard();
 
-let cardTwo = getRandomCard();
 // ordered list of items
-let cards = [cardOne, cardTwo];
-let cardTotal =  cardOne + cardTwo;
+
+let cards = [];
+let cardTotal =  0;
 
 let blackJackMessage = "";
 
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 
 let messageEl = document.getElementById("message-el");
 
@@ -26,11 +25,29 @@ let cardEl = document.getElementById("cards-el");
 // functions hoisted to top, regardless of how far down it is written 
 function getRandomCard(){
     // gets a random number from 1 - 10, rounding to lowest whole number
-    return Math.floor(Math.random() * 10) + 1;
+    let randomNumber = Math.floor(Math.random() * 13) + 1;
+
+    if (randomNumber > 10){
+        return 10
+    } else if (randomNumber === 1){
+        return 11;
+    }else{
+        return randomNumber;
+    }
+
 }
 
 
 function startGame(){
+    isAlive = true;
+    let cardOne = getRandomCard();
+    // console.log(cardOne);
+    let cardTwo = getRandomCard();
+    // console.log(cardTwo);
+    cards = [cardOne, cardTwo];
+    cardTotal =  cardOne + cardTwo;
+
+
     renderGame();
 
 }
