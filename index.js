@@ -86,10 +86,15 @@ messageEl.textContent = blackJackMessage;
 
 function newCard(){
     // console.log("Drawing New Card from Deck!");
-   let hitMeCard = getRandomCard();
+   if(isAlive === true && hasBlackJack === false){
+
+    let hitMeCard = getRandomCard();
    
    cardTotal += hitMeCard;
    cards.push(hitMeCard);
+    
+   }
+   
    // console.log(cards);
    renderGame();
 }
