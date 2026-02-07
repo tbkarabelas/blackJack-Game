@@ -1,6 +1,6 @@
-let cardOne = 10;
+let cardOne = getRandomCard();
 
-let cardTwo = 9;
+let cardTwo = getRandomCard();
 // ordered list of items
 let cards = [cardOne, cardTwo];
 let cardTotal =  cardOne + cardTwo;
@@ -21,6 +21,14 @@ let cardEl = document.getElementById("cards-el");
 
 // console.log(sumEl);
 // console.log(messageEl);
+
+
+// functions hoisted to top, regardless of how far down it is written 
+function getRandomCard(){
+    // gets a random number from 1 - 10, rounding to lowest whole number
+    return Math.floor(Math.random() * 10) + 1;
+}
+
 
 function startGame(){
     renderGame();
@@ -61,7 +69,7 @@ messageEl.textContent = blackJackMessage;
 
 function newCard(){
     // console.log("Drawing New Card from Deck!");
-   let hitMeCard = 2;
+   let hitMeCard = getRandomCard();
    
    cardTotal += hitMeCard;
    cards.push(hitMeCard);
